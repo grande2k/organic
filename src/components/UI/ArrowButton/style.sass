@@ -1,0 +1,30 @@
+@import '/src/assets/sass/_vars.sass'
+
+.arrow-button
+	border-radius: 16px
+	display: inline-flex
+	cursor: pointer
+	justify-content: center
+	align-items: center
+	min-width: 220px
+	height: 70px
+	padding: 10px
+	font-size: 18px
+	font-weight: 700
+	border: none
+	&.yellow
+		background-color: $light-yellow
+		color: $accent
+		&:hover
+			background: $accent
+			color: $white
+
+	&.blue
+		background-color: $accent
+		color: $white
+		&:hover
+			background: $light-yellow
+			color: $accent
+	img
+		display: block
+		margin-left: 10px

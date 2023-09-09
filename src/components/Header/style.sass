@@ -1,0 +1,69 @@
+@import '/src/assets/sass/_vars.sass'
+
+#header
+	background-color: $white
+	height: 150px
+	display: flex
+	align-items: center
+	width: 100%
+	.header-container
+		max-width: 1600px
+		margin: 0 auto
+		padding: 0 10px
+		width: 100%
+	.header__content
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 30px 0
+		.header__links
+			ul
+				display: flex
+				align-items: center
+				list-style: none
+				.header__link
+					&:not(:last-child)
+						margin-right: 20px
+					a
+						display: block
+						font-size: 20px
+						font-weight: 700
+						color: $accent
+						cursor: pointer
+						text-decoration: none
+						&:hover
+							color: $light-green
+		.header__right
+			display: flex
+			align-items: center
+			.header-right__btn
+				width: 56px
+				height: 56px
+				display: flex
+				justify-content: center
+				align-items: center
+				cursor: pointer
+				border-radius: 50%
+				color: $white
+				font-size: 20px
+				border: 1px solid
+				transition: background-color 0.1s ease
+				&.header-search
+					background-color: $light-green
+					border-color: $light-green
+					&:hover
+						color: $light-green
+						background-color: transparent
+				&.header-cart
+					margin: 0 1rem 0 2rem
+					background-color: $accent
+					border-color: $accent
+					&:hover
+						color: $accent
+						background-color: transparent
+					
+			.cart-count
+				font-size: 18px
+				font-weight: 500
+				margin: 0
+				color: $accent

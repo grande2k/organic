@@ -1,0 +1,82 @@
+@import '/src/assets/sass/_vars.sass'
+@import '/src/assets/sass/_extends.sass'
+
+.home-screen
+	min-height: calc(100vh - 150px)
+	background-image: url('/src/assets/images/home-screen-bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	display: flex
+	flex-direction: column
+	justify-content: center
+	.home-screen__content 
+		max-width: 530px
+		width: 100%
+		span
+			@extend %italic-title
+		strong
+			display: block
+			font-weight: 800
+			color: $accent
+			font-size: 70px
+			margin: 8px 0 20px 0
+
+
+.natural-offer
+	background-color: $white
+	.natural-offer__content 
+		@extend %grid-half
+		& > *
+			border-radius: 30px
+			padding: 50px
+			min-height: 360px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			span 
+				@extend %italic-title
+			strong
+				@extend %main-title
+			&.pink
+				background-color: #F96893
+				background-image: url('/src/assets/images/natural-offer-pink.jpg')
+				background-repeat: no-repeat
+				background-size: cover
+				background-position: center
+				*
+					color: $white
+			&.white
+				background-color: $white
+				background-image: url('/src/assets/images/natural-offer-white.jpg')
+				background-repeat: no-repeat
+				background-size: cover
+				background-position: center
+
+.home-about
+	background-color: $white
+	.home-about__content 
+		@extend %grid-half
+		grid-gap: 50px
+		.home-about__info
+			span 
+				@extend %italic-title
+			& > strong 
+				@extend %main-title
+			& > p 
+				@extend %paragraph
+				margin-bottom: 40px
+			.home-about-info__row
+				display: flex
+				align-items: center
+				margin-bottom: 35px
+				padding-left: 20px
+				max-width: 560px
+				width: 100%
+				.home-about-info-row__image 
+					margin-right: 30px
+				.home-about-info-row__text 
+					strong	
+						@extend %small-title
+					p 
+						@extend %paragraph

@@ -1,0 +1,27 @@
+<header id="header">
+	<div class="header-container">
+		<div class="header__content">
+			<div class="header__logo">
+				<img src="../../assets/images/logo.svg" class="img-resp" alt="">
+			</div>
+			<div class="header__links">
+				<nav>
+					<ul>
+						<li v-for="link in links" :key="link.name" class="header__link">
+							<router-link :to="link.path">{{link.name}}</router-link>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__right">
+				<div class="header-right__btn header-search">
+					<VueIcon icon="search"/>
+				</div>
+				<div class="header-right__btn header-cart">
+					<VueIcon icon="cart-shopping"/>
+				</div>
+				<p v-text="`Cart (${Math.round(cartItems)})`" class="cart-count" />
+			</div>
+		</div>	
+	</div>
+</header>
