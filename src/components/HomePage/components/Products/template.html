@@ -1,0 +1,9 @@
+<div class="products__title">
+    <h1 v-text="titleBig"/>
+</div>
+<div class="products__grid">
+    <div class="product" v-for="product in products" :key="product.id">
+        <strong v-text="product.name"/>
+        <p v-text="product.price"/>
+    </div>
+</div>
