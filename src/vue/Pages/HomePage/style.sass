@@ -80,3 +80,32 @@
 						@extend %small-title
 					p 
 						@extend %paragraph
+
+
+.products
+	.products__title
+		text-align: center
+		margin-bottom: 40px
+		span	
+			@extend %italic-title
+		strong 
+			@extend %main-title
+	.products__content
+		text-align: center
+		.arrow-button 
+			margin-top: 100px
+
+
+.offers
+	background-color: $accent
+	.offers__top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 50px
+		.offers__title
+			span	
+				@extend %italic-title
+			strong 
+				@extend %main-title
+				color: $white

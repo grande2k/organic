@@ -1,0 +1,20 @@
+<div class="products__grid">
+    <div class="product" v-for="product in products" :key="product.id">
+        <div v-text="product.type" class="product__type"/>
+        <div class="product__image">
+            <img :src="require(`../../../assets/images/products/${product.image}.png`)" alt="" class="img-resp">
+        </div>
+        <div class="product__info">
+            <p v-text="product.name" class="product__name"/>
+            <div class="product-info__row">
+                <div class="product__price">
+                    <s v-text="`$${product.price.old}`" class="prodcut-price__old"/>
+                    <p v-text="`$${product.price.current}`" class="product-price__current"/>
+                </div>
+                <div class="product__rating">
+                    <img :src="require(`../../../assets/images/${product.rating}-star.png`)" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

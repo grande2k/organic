@@ -1,6 +1,6 @@
 'use strict';
 
-import Header from '../components/Header/Header.vue'
+import Header from '../vue/Layouts/Header/Header.vue'
 
 export default {
 	name: 'App',

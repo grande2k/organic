@@ -28,16 +28,16 @@
 		<div class="container">
 			<div class="home-about__content">
 				<div class="home-about__img">
-					<img src="../../assets/images/citruses.png" class="img-resp" alt="">
+					<img src="../../../assets/images/citruses.png" class="img-resp" alt="">
 				</div>
 				<div class="home-about__info">
-					<span v-text="`About Us`"/>
+					<span>About Us</span>
 					<strong>We Believe in Working Accredited Farmers</strong>
 					<p>Simply dummy text of the printing and typesetting industry. Lorem had ceased to 
 	been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 					<div class="home-about-info__row">
 						<div class="home-about-info-row__image">
-							<img src="../../assets/images/home-about-1.png" alt="">
+							<img src="../../../assets/images/home-about-1.png" alt="">
 						</div>
 						<div class="home-about-info-row__text">
 							<strong>Organic Foods Only</strong>
@@ -46,7 +46,7 @@
 					</div>
 					<div class="home-about-info__row">
 						<div class="home-about-info-row__image">
-							<img src="../../assets/images/home-about-2.png" alt="">
+							<img src="../../../assets/images/home-about-2.png" alt="">
 						</div>
 						<div class="home-about-info-row__text">
 							<strong>Quality Standards</strong>
@@ -61,7 +61,27 @@
 
 	<section class="products">
 		<div class="container">
-			<Products titleBig="Our Products"/>
+			<div class="products__content">
+				<div class="products__title">
+					<span>Categories</span>
+					<strong>Our Products</strong>
+				</div>
+				<Products :products="categories"/>
+				<ArrowButton buttonText="Load More" buttonBg="blue"/>
+			</div>
+		</div>
+	</section>
+
+	<section class="offers">
+		<div class="container">
+			<div class="offers__top">
+				<div class="offers__title">
+					<span>Offer</span>
+					<strong>We Offer Organic For You</strong>
+				</div>
+				<ArrowButton buttonText="View All Product" buttonBg="yellow"/>
+			</div>
+			<Products :products="offers"/>
 		</div>
 	</section>
 </div>
