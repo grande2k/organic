@@ -1,0 +1,44 @@
+<footer id="footer">
+	<div class="container">
+		<div class="footer__content">
+			<div class="footer__contacts" data-aos="fade-right" data-aos-duration="1000">
+				<h3 class="footer-column__title">Contact Us</h3>
+				<div class="footer-column__item">
+					<strong>Email</strong>
+					<p>needhelp@Organia.com</p>
+				</div>
+				<div class="footer-column__item">
+					<strong>Phone</strong>
+					<p>666 888 888</p>
+				</div>
+				<div class="footer-column__item">
+					<strong>Address</strong>
+					<p>88 road, borklyn street, USA</p>
+				</div>
+			</div>
+			<div class="footer__center" data-aos="fade-down" data-aos-duration="1000">
+				<div class="footer__logo">
+					<img :src="require(`/src/assets/images/logo.svg`)" alt="logo">
+				</div>
+				<p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing </p>
+				<div class="footer-social__media">
+					<a v-for="el in socialMedia" :key="el.link" :href="el.link">
+						<VueIcon :icon="el.icon"/>
+					</a>
+				</div>
+			</div>
+			<div class="footer__pages" data-aos="fade-left" data-aos-duration="1000">
+				<h3 class="footer-column__title">Utility Pages</h3>
+				<p class="footer-column__item">Style Guide</p>
+				<p class="footer-column__item">404 Not Found</p>
+				<p class="footer-column__item">Password Protected</p>
+				<p class="footer-column__item">Licences</p>
+				<p class="footer-column__item">Changelog</p>
+			</div>
+		</div>
+
+		<div id="copyright" data-aos="fade-up" data-aos-duration="1000">
+			Copyright © <span>Organick</span>
+		</div>
+	</div>
+</footer>

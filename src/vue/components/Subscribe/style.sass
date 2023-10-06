@@ -1,0 +1,51 @@
+@import '/src/assets/sass/_vars.sass'
+@import '/src/assets/sass/_extends.sass'
+
+.subscribe-news
+	.subscribe__content
+		padding: 100px 25px
+		background-color: #37B5DE
+		background-image: url('/src/assets/images/subscribe-bg.png')
+		background-size: cover
+		background-position: center
+		border-radius: 30px
+		.subscribe__container
+			max-width: 1250px
+			margin: 0 auto
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.subscribe__title
+				display: block
+				color: $white
+				font-size: 50px
+				font-weight: 800
+				max-width: 360px
+			.subscribe__form
+				display: flex
+				.subscribe__input
+					display: block
+					border-radius: 16px
+					background-color: $white
+					padding: 30px 25px
+					color: $accent
+					font-size: 18px
+					font-weight: 400
+					width: 350px
+					max-width: 100%
+					border: none
+					outline: none
+					border: 1px solid transparent
+					transition: all 0.2s ease
+					&::placeholder
+						color: #ababab
+						font-style: italic
+					&:focus 
+						border-color: $accent
+						box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3)
+				.subscribe__btn
+					margin-left: 6px
+					height: auto
+					font-size: 20px
+					img 
+						display: none

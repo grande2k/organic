@@ -9,10 +9,10 @@
             </div>
             <strong class="news-item__title" v-text="item.title"/>
             <p class="news-item__description" v-text="item.description"/>
-            <a href="#" class="news-item__more">
+            <router-link to="/news" class="news-item__more">
                 Read More
                 <img src="../../../assets/images/arrow-button.svg" alt="">
-            </a>
+            </router-link>
         </div>
     </div>
 </div>

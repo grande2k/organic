@@ -5,7 +5,7 @@ import NewsPage     from '../vue/Pages/NewsPage/NewsPage.vue'
 
 export default createRouter({
 	routes: [
-		{path: '/home', component: HomePage},
+		{path: '/home', component: HomePage, alias: '/'},
 		{path: '/contacts', component: ContactsPage},
 		{path: '/news', component: NewsPage}
 	],

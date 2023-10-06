@@ -5,11 +5,11 @@ export default {
 	data() {
 		return {
 			links: [
-				{name: 'Home', path: '/home'},
-				{name: 'About', path: '/'},
-				{name: 'Pages', path: '/'},
-				{name: 'Shop', path: '/'},
-				{name: 'Projects', path: '/'},
+				{name: 'Home', path: '/'},
+				{name: 'About', path: '/about'},
+				{name: 'Pages', path: '/pages'},
+				{name: 'Shop', path: '/shop'},
+				{name: 'Projects', path: '/projects'},
 				{name: 'News', path: '/news'},
 			],
 			cartItems: 0,

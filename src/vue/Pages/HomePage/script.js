@@ -3,6 +3,7 @@
 import ArrowButton from '../../UI/ArrowButton/ArrowButton.vue'
 import Products    from '../../components/Products/Products.vue'
 import News        from '../../components/News/News.vue'
+import Subscribe   from '../../components/Subscribe/Subscribe.vue'
 import Slider      from './components/Slider/Slider.vue'
 import AutoCounter from 'vue3-autocounter'
 
@@ -13,7 +14,8 @@ export default {
 		Products,
 		Slider,
 		AutoCounter,
-		News
+		News,
+		Subscribe
 	},
 	data() {
 		return {
