@@ -6,11 +6,11 @@ export default {
 		return {
 			links: [
 				{name: 'Home', path: '/home'},
-				{name: 'About', path: '/contacts'},
+				{name: 'About', path: '/'},
 				{name: 'Pages', path: '/'},
 				{name: 'Shop', path: '/'},
 				{name: 'Projects', path: '/'},
-				{name: 'News', path: '/'},
+				{name: 'News', path: '/news'},
 			],
 			cartItems: 0,
 		}

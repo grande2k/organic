@@ -1,0 +1,76 @@
+@import '/src/assets/sass/_vars.sass'
+@import '/src/assets/sass/_extends.sass'
+
+.news__grid
+	@extend %grid-half
+	grid-gap: 70px 50px
+	.news__item
+		position: relative
+		border-radius: 30px
+
+		.news-item__cover
+			display: block
+			max-width: 100%
+			height: auto
+
+		.news-item__date
+			position: absolute
+			top: 40px
+			left: 30px
+			border-radius: 50%
+			background-color: $white
+			font-size: 20px
+			color: $accent
+			font-weight: 800
+			width: 82px
+			height: 82px
+			display: flex
+			justify-content: center
+			align-items: center
+			word-spacing: 9999999px
+			text-align: center
+
+		.news-item__info
+			position: absolute
+			width: 90%
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -30px
+			background-color: $white 
+			border-radius: 30px
+			padding: 55px 55px 20px 55px
+			min-height: 280px
+
+			.news-item__autor
+				display: flex
+				align-items: center
+				margin-bottom: 20px
+				p 
+					font-size: 18px
+					margin: 0 0 0 8px
+					font-weight: 400
+					color: $accent
+					line-height: 1
+
+			.news-item__title
+				@extend %small-title
+
+			.news-item__description
+				@extend %paragraph
+
+			.news-item__more 
+				display: flex
+				text-decoration: none
+				align-items: center
+				color: $accent
+				font-size: 20px
+				font-weight: 700
+				margin-top: 20px
+				img 
+					display: block
+					margin-left: 5px
+					position: relative
+					left: 0
+				&:hover
+					img 
+						left: 5px

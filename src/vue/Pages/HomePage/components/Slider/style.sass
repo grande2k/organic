@@ -1,0 +1,67 @@
+@import '/src/assets/sass/_vars.sass'
+@import '/src/assets/sass/_extends.sass'
+
+.carousel
+	padding: 0
+	max-width: 780px
+	margin: 0 auto
+	.carousel__slide
+		flex-direction: column
+
+		.testimonials__avatar
+			margin-bottom: 20px
+			img 	
+				display: block
+				max-width: 100%
+				height: auto
+
+		.testimonials__rating
+			margin-bottom: 25px
+			img 	
+				display: block
+				max-width: 100%
+				height: auto
+
+		.testimonials-description
+			font-family: 'Open Sans'
+			font-size: 18px
+			line-height: 165%
+			color: $gray
+			font-weight: 400
+			margin: 0 0 20px 0
+
+		.testimonials-name
+			display: block
+			font-weight: 600
+			font-size: 25px
+			color: $accent
+			margin-bottom: 5px
+
+		.testimonials-type
+			display: block
+			font-family: 'Open Sans'
+			font-size: 15px
+			line-height: 165%
+			color: $gray
+			font-weight: 400
+
+	.carousel__prev,
+	.carousel__next
+		display: none
+
+	.carousel__pagination
+		margin-top: 20px
+		.carousel__pagination-item
+			&:not(:last-child)
+				margin-right: 6px
+			.carousel__pagination-button
+				border-radius: 50%
+				width: 8px
+				height: 8px
+				background-color: #C4C4C4
+				padding: 0
+				outline: none
+				&:after 
+					display: none
+				&.carousel__pagination-button--active
+					background-color: $light-green

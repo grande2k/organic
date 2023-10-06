@@ -109,3 +109,130 @@
 			strong 
 				@extend %main-title
 				color: $white
+
+
+.testimonials
+	background-image: url('/src/assets/images/testimonials-bg.png')
+	background-size: cover
+	background-position: center
+	.container 	
+		max-width: 1100px
+	.testimonials__title
+		text-align: center
+		margin-bottom: 60px
+		span	
+			@extend %italic-title
+		strong 
+			@extend %main-title
+	.testimonials__counters
+		display: flex
+		align-items: center
+		justify-content: space-around
+		margin-top: 200px
+		.counter__item
+			width: 210px
+			height: 210px
+			border-radius: 50%
+			border: 3px solid $light-green
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			.counter__number
+				font-size: 50px
+				font-weight: 800
+				color: $accent
+			p 
+				font-family: 'Open Sans'
+				color: $accent
+				font-size: 18px
+				margin: 0
+
+
+.eco-friendly
+	display: grid
+	grid-template-columns: 1fr 1fr
+	.eco-friendly__photo
+		img 
+			display: block
+			max-width: 100%
+			height: auto
+			object-fit: cover
+
+	.eco-friendly__text
+		display: flex
+		align-items: center
+		.eco-friendly__description
+			max-width: 790px
+			border-radius: 30px
+			padding: 80px 90px
+			position: relative
+			left: -150px
+			background-color: $white
+			.eco-friendly__title
+				margin-bottom: 35px
+				span	
+					@extend %italic-title
+				strong 
+					@extend %main-title
+			.eco-friendly__topic
+				strong
+					display: block
+					font-size: 25px
+					color: $accent
+					font-weight: 500
+					margin-bottom: 8px
+				p 
+					font-family: 'Open Sans', sans-serif
+					margin: 0
+					font-size: 18px
+					color: $gray
+					font-weight: 400
+					line-height: 165%
+				&:not(:last-child)
+					margin-bottom: 35px
+
+
+.eco-friendly-slides
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 40px
+	.item 
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		position: relative
+		p 
+			margin: 0
+			border-radius: 20px
+			padding: 33px 10px
+			width: 50%
+			font-size: 25px
+			color: $accent
+			font-weight: 500
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: 2
+			background-color: $white
+			text-align: center
+		img
+			position: relative
+			z-index: 1
+			display: block
+			max-width: 100%
+			height: auto
+
+.news
+	.news__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 50px
+		.news__title
+			max-width: 700px
+			span	
+				@extend %italic-title
+			strong 
+				@extend %main-title

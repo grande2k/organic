@@ -1,0 +1,18 @@
+<div class="news__grid">
+    <div v-for="item in filteredNews" :key="item.name" class="news__item">
+        <img :src="require(`/src/assets/images/news/${item.img}.png`)" class="news-item__cover" alt="item.alt">
+        <span class="news-item__date" v-text="item.date"/>
+        <div class="news-item__info">
+            <div class="news-item__autor">
+                <img src="../../../assets/images/user-icon.svg" alt="">
+                <p v-text="`By ${item.autor}`"/>
+            </div>
+            <strong class="news-item__title" v-text="item.title"/>
+            <p class="news-item__description" v-text="item.description"/>
+            <a href="#" class="news-item__more">
+                Read More
+                <img src="../../../assets/images/arrow-button.svg" alt="">
+            </a>
+        </div>
+    </div>
+</div>

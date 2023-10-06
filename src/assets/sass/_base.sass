@@ -12,6 +12,11 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+ul,
+ol 
+	margin: 0
+	padding: 0
+
 input, textarea
 	font-family: inherit
 
@@ -21,6 +26,15 @@ textarea
 
 section
 	padding: 150px 0
+	&.page-title 
+		padding: 0
+		img 	
+			display: block
+			max-width: 100%
+			height: auto
+
+.p-0
+	padding: 0
 
 .container
 	max-width: 1400px
@@ -36,16 +50,4 @@ section
 .text-center
 	text-align: center
 
-.slick-slider 
-	min-width: 0
-	display: flex
-	align-items: center
-
-.slick-list 
-	overflow: hidden
-
-.slick-track 
-	display: flex
-	align-items: center
-	justify-content: center
 

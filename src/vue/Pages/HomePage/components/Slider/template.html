@@ -1,0 +1,18 @@
+<Carousel :wrapAround="true" :autoplay="5000">
+	<Slide v-for="slide in testimonials" class="testimonials__slide" :key="slide">
+		<div class="testimonials__avatar">
+			<img :src="require(`/src/assets/images/${slide.img}.png`)" alt="">
+		</div>
+		<div class="testimonials__rating">
+            <img :src="require(`/src/assets/images/${slide.rating}-star.png`)" alt="">
+        </div>
+        <p class="testimonials-description" v-text="slide.description"/>
+        <strong class="testimonials-name" v-text="slide.name"/>
+        <span class="testimonials-type" v-text="slide.type"/>
+	</Slide>
+
+	<template #addons>
+      <Navigation />
+      <Pagination />
+    </template>
+</Carousel>

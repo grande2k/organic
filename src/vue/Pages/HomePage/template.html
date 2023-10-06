@@ -72,6 +72,24 @@
 		</div>
 	</section>
 
+	<section class="testimonials" ref="testimonials">
+		<div class="container">
+			<div class="testimonials__title">
+				<span>Testimonial</span>
+				<strong>What Our Customer Saying?</strong>
+			</div>
+
+			<Slider/>
+
+			<div class="testimonials__counters">
+				<div v-for="counter in counters" class="counter__item">
+					<AutoCounter ref="counter" :startAmount="0" :endAmount="counter.number" :duration="3" :suffix="counter.suffix" :autoinit="false" class="counter__number"/>
+					<p v-text="counter.name"/>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="offers">
 		<div class="container">
 			<div class="offers__top">
@@ -82,6 +100,63 @@
 				<ArrowButton buttonText="View All Product" buttonBg="yellow"/>
 			</div>
 			<Products :products="offers"/>
+		</div>
+	</section>
+
+	<section class="eco-friendly p-0">
+		<div class="eco-friendly__photo">
+			<img src="../../../assets/images/eco-friendly.png" alt="">
+		</div>
+		<div class="eco-friendly__text">
+			<div class="eco-friendly__description">
+				<div class="eco-friendly__title">
+					<span>Eco Friendly</span>
+					<strong>Econis is a Friendly Organic Store</strong>
+				</div>
+				<div class="eco-friendly__topic">
+					<strong>Start with Our Company First</strong>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.</p>
+				</div>
+				<div class="eco-friendly__topic">
+					<strong>Learn How to Grow Yourself</strong>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.</p>
+				</div>
+				<div class="eco-friendly__topic">
+					<strong>Farming Strategies of Today</strong>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="eco-friendly-slides">
+		<div class="item">
+			<img src="../../../assets/images/organic-juice.png" alt="">
+			<p>Organic Juice</p>
+		</div>
+		<div class="item">
+			<img src="../../../assets/images/organic-food.png" alt="">
+			<p>Organic food</p>
+		</div>
+		<div class="item">
+			<img src="../../../assets/images/organic-cookies.png" alt="">
+			<p>Nuts Cookies</p>
+		</div>
+	</section>
+
+	<section class="news">
+		<div class="container">
+			<div class="news__header">
+				<div class="news__title">
+					<span>News</span>
+					<strong>Discover weekly content about organic food, & more</strong>
+				</div>
+				<router-link to="/news">
+					<ArrowButton buttonText="More News" buttonBg="white"/>
+				</router-link>
+			</div>
+
+			<News :count="2"/>	
 		</div>
 	</section>
 </div>
