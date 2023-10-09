@@ -40,7 +40,7 @@
 			border-radius: 30px
 			padding: 55px 55px 20px 55px
 			min-height: 280px
-
+			box-shadow: 5px 5px 10px rgba(0,0,0,.3)		
 			.news-item__autor
 				display: flex
 				align-items: center
@@ -74,3 +74,59 @@
 				&:hover
 					img 
 						left: 5px
+
+
+@media (max-width: 1200px)
+	.news__grid
+		.news__item
+			.news-item__date 
+				width: 60px
+				height: 60px
+				top: 20px
+				font-size: 14px
+			.news-item__info
+				min-height: auto
+				padding: 25px
+				border-radius: 20px
+				.news-item__autor
+					img 
+						width: 14px
+					p
+						font-size: 14px
+				.news-item__more
+					font-size: 16px
+					margin-top: 10px
+
+@media (max-width: 768px)
+	.news__grid
+		grid-gap: 50px 15px
+
+@media (max-width: 480px)
+	.news__grid
+		grid-gap: 70px 15px
+		.news__item
+			text-align: left
+			.news-item__date 
+				width: 45px
+				height: 45px
+				top: 10px
+				font-size: 12px
+				left: 10px
+			.news-item__info
+				padding: 15px
+				border-radius: 10px
+				.news-item__title
+					font-size: 14px
+				.news-item__description
+					font-size: 12px
+				.news-item__autor
+					margin-bottom: 10px
+					img 
+						width: 12px
+					p
+						font-size: 12px
+				.news-item__more
+					font-size: 12px
+					line-height: 1
+					img 
+						width: 12px

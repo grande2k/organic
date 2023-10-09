@@ -1,6 +1,7 @@
 @import '/src/assets/sass/_vars.sass'
 
 #footer 
+	padding-top: 100px
 	.footer__content
 		display: grid
 		grid-template-columns: 1fr 2fr 1fr
@@ -59,8 +60,14 @@
 					transition: none
 					&:not(:last-child)
 						margin-right: 35px
-					&:hover
-						color: $light-green
+					&.instagram:hover
+						color: #d6249f
+					&.facebook:hover
+						color: #0000ff
+					&.twitter:hover
+						color: #1DA1F2
+					&.pinterest:hover
+						color: #E60023
 
 	#copyright
 		font-family: 'Open sans', sans-serif
@@ -71,3 +78,76 @@
 		font-weight: 400
 		span
 			font-weight: 700
+
+
+
+@media (max-width: 992px) 
+	#footer
+		.footer__content
+			padding-bottom: 50px
+			.footer__center
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				.footer__logo
+					margin-bottom: 10px
+					img
+						width: 150px
+				.footer-social__media
+					margin-top: 25px
+
+			p 
+				font-size: 14px
+			.footer-column__title
+				font-size: 24px
+				margin-bottom: 15px
+			.footer-column__item
+				strong
+					font-size: 16px
+
+
+@media (max-width: 768px)
+	#footer
+		.footer__content
+			grid-gap: 20px
+			.footer__center
+				padding: 0 20px
+
+@media (max-width: 480px)
+	#footer
+		.footer__content
+			grid-template-columns: 1fr
+			.footer__center
+				grid-row: 1
+				border-left: none
+				border-right: none
+				border-bottom: 1px solid #d4d4d4
+				padding: 0 0 20px 0
+			.footer__pages,
+			.footer__contacts
+				text-align: center
+			.footer__contacts
+				border-bottom: 1px solid #d4d4d4
+				padding-bottom: 20px
+
+		#copyright
+			font-size: 14px
+
+@media (max-width: 350px)
+	#footer
+		.footer__content
+			.footer-column__title
+				font-size: 18px
+			.footer__center
+				.footer__logo
+					img
+						width: 120px
+				.footer-social__media
+					a 
+						font-size: 14px	
+			p
+				font-size: 10px
+
+			.footer-column__item
+				strong 
+					font-size: 12px

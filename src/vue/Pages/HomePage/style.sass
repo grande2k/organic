@@ -58,6 +58,7 @@
 	.home-about__content 
 		@extend %grid-half
 		grid-gap: 50px
+		align-items: center
 		.home-about__info
 			span 
 				@extend %italic-title
@@ -65,7 +66,7 @@
 				@extend %main-title
 			& > p 
 				@extend %paragraph
-				margin-bottom: 40px
+				margin: 10px 0 40px 0
 			.home-about-info__row
 				display: flex
 				align-items: center
@@ -150,18 +151,19 @@
 
 
 .eco-friendly
-	display: grid
-	grid-template-columns: 1fr 1fr
+	@extend %grid-half
 	.eco-friendly__photo
-		img 
-			display: block
-			max-width: 100%
-			height: auto
-			object-fit: cover
+		background-image: url('/src/assets/images/eco-friendly.png')
+		background-size: cover
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		padding: 50px 0
 
 	.eco-friendly__text
 		display: flex
 		align-items: center
+		margin: 100px 0
 		.eco-friendly__description
 			max-width: 790px
 			border-radius: 30px
@@ -169,6 +171,7 @@
 			position: relative
 			left: -150px
 			background-color: $white
+			box-shadow: 10px 10px 30px rgba(0,0,0,.3)
 			.eco-friendly__title
 				margin-bottom: 35px
 				span	
@@ -177,18 +180,10 @@
 					@extend %main-title
 			.eco-friendly__topic
 				strong
-					display: block
-					font-size: 25px
-					color: $accent
-					font-weight: 500
-					margin-bottom: 8px
-				p 
+					@extend %small-title
+				p
+					@extend %paragraph
 					font-family: 'Open Sans', sans-serif
-					margin: 0
-					font-size: 18px
-					color: $gray
-					font-weight: 400
-					line-height: 165%
 				&:not(:last-child)
 					margin-bottom: 35px
 
@@ -236,3 +231,6 @@
 				@extend %italic-title
 			strong 
 				@extend %main-title
+
+
+@import 'media'

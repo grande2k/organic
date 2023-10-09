@@ -1,17 +1,15 @@
-<header id="header" data-aos="fade-down" data-aos-duration="1000">
+<header id="header">
 	<div class="header-container">
 		<div class="header__content">
-			<div class="header__logo">
+			<router-link to="/" class="header__logo">
 				<img src="../../../assets/images/logo.svg" class="img-resp" alt="">
-			</div>
+			</router-link>
 			<div class="header__links">
-				<nav>
-					<ul>
-						<li v-for="link in links" :key="link.name" class="header__link">
-							<router-link :to="link.path">{{link.name}}</router-link>
-						</li>
-					</ul>
-				</nav>
+				<ul>
+					<li v-for="link in links" :key="link.name" class="header__link">
+						<router-link :to="link.path">{{link.name}}</router-link>
+					</li>
+				</ul>
 			</div>
 			<div class="header__right">
 				<div class="header-right__btn header-search">
@@ -22,6 +20,30 @@
 				</div>
 				<p v-text="`Cart (${Math.round(cartItems)})`" class="cart-count" />
 			</div>
-		</div>	
+
+			<div class="burger" :class="{active: burgerActive}" @click="burgerActive = !burgerActive">
+				<span></span>
+			</div>
+
+			<div class="burger-menu" :class="{active: burgerActive}">
+				<div class="header__right">
+					<div class="header-right__btn header-search">
+						<VueIcon icon="search"/>
+					</div>
+					<div class="header-right__btn header-cart">
+						<VueIcon icon="cart-shopping"/>
+					</div>
+					<p v-text="`Cart (${Math.round(cartItems)})`" class="cart-count" />
+				</div>
+				
+				<div class="header__links" :class="{active: burgerActive}">
+					<ul>
+						<li v-for="link in links" :key="link.name" class="header__link">
+							<router-link :to="link.path" @click="burgerActive = !burgerActive">{{link.name}}</router-link>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </header>

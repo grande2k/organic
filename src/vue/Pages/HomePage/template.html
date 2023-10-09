@@ -1,10 +1,10 @@
 <div class="home-page">
 	<section class="home-screen">
 		<div class="container">
-			<div class="home-screen__content" data-aos="fade-right" data-aos-duration="1000">
-				<span>100% Natural Food</span>
-				<strong>Choose the best healthier way of life</strong>
-				<ArrowButton buttonText="Explore Now" buttonBg="yellow"/>
+			<div class="home-screen__content">
+				<span   data-aos="fade-right" data-aos-duration="1000">100% Natural Food</span>
+				<strong data-aos="fade-right" data-aos-duration="1000">Choose the best healthier way of life</strong>
+				<ArrowButton buttonText="Explore Now" buttonBg="yellow" data-aos="fade-right" data-aos-duration="2000"/>
 			</div>
 		</div>
 	</section>
@@ -66,8 +66,12 @@
 					<span>Categories</span>
 					<strong>Our Products</strong>
 				</div>
-				<Products :products="categories" data-aos="fade-up" data-aos-duration="1000"/>
-				<ArrowButton buttonText="Load More" buttonBg="blue" data-aos="fade-up" data-aos-duration="1000"/>
+
+				<Products :preview="8"/>
+
+				<router-link to="/shop">
+					<ArrowButton buttonText="Load More" buttonBg="blue" data-aos="fade-up" data-aos-duration="1000"/>
+				</router-link>
 			</div>
 		</div>
 	</section>
@@ -81,9 +85,9 @@
 
 			<Slider/>
 
-			<div class="testimonials__counters" data-aos="fade-up" data-aos-duration="1000">
+			<div class="testimonials__counters" ref="counters">
 				<div v-for="counter in counters" class="counter__item">
-					<AutoCounter ref="counter" :startAmount="0" :endAmount="counter.number" :duration="3" :suffix="counter.suffix" :autoinit="false" class="counter__number"/>
+					<AutoCounter ref="counter_item" :startAmount="0" :endAmount="counter.number" :duration="3" :suffix="counter.suffix" :autoinit="false" class="counter__number"/>
 					<p v-text="counter.name"/>
 				</div>
 			</div>
@@ -97,16 +101,22 @@
 					<span>Offer</span>
 					<strong>We Offer Organic For You</strong>
 				</div>
-				<ArrowButton buttonText="View All Product" buttonBg="yellow" data-aos="fade-left" data-aos-duration="1000"/>
+				<router-link to="/shop">
+					<ArrowButton class="arrow-button-row" buttonText="View All Product" buttonBg="yellow" data-aos="fade-left" data-aos-duration="1000"/>
+				</router-link>
 			</div>
-			<Products :products="offers" data-aos="fade-up" data-aos-duration="1000"/>
+
+			<Products filter="offer"/>
+
+			<ArrowButton class="arrow-button-mob" buttonText="View All Product" buttonBg="yellow" data-aos="fade-up" data-aos-duration="1000"/>
 		</div>
 	</section>
 
 	<section class="eco-friendly p-0">
 		<div class="eco-friendly__photo" data-aos="fade-right" data-aos-duration="1000">
-			<img src="../../../assets/images/eco-friendly.png" alt="">
+			
 		</div>
+
 		<div class="eco-friendly__text" data-aos="fade-left" data-aos-duration="1000">
 			<div class="eco-friendly__description">
 				<div class="eco-friendly__title">
@@ -130,15 +140,15 @@
 	</section>
 
 	<section class="eco-friendly-slides">
-		<div class="item">
+		<div class="item" data-aos="fade-left" data-aos-duration="1000">
 			<img src="../../../assets/images/organic-juice.png" alt="">
 			<p>Organic Juice</p>
 		</div>
-		<div class="item">
+		<div class="item" data-aos="fade-right" data-aos-duration="1000">
 			<img src="../../../assets/images/organic-food.png" alt="">
 			<p>Organic food</p>
 		</div>
-		<div class="item">
+		<div class="item" data-aos="fade-left" data-aos-duration="1000">
 			<img src="../../../assets/images/organic-cookies.png" alt="">
 			<p>Nuts Cookies</p>
 		</div>
@@ -152,11 +162,15 @@
 					<strong>Discover weekly content about organic food, & more</strong>
 				</div>
 				<router-link to="/news" data-aos="fade-left" data-aos-duration="1000">
-					<ArrowButton buttonText="More News" buttonBg="white"/>
+					<ArrowButton class="arrow-button-row" buttonText="More News" buttonBg="white"/>
 				</router-link>
 			</div>
 
-			<News :count="2" data-aos="fade-up" data-aos-duration="1000"/>	
+			<News :count="2"/>	
+
+			<router-link to="/news" data-aos="fade-up" data-aos-duration="1000">
+				<ArrowButton class="arrow-button-mob" buttonText="More News" buttonBg="white"/>
+			</router-link>
 		</div>
 	</section>
 

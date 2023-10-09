@@ -4,12 +4,17 @@
 	box-sizing: border-box
 	transition: all 0.15s ease
 
+html,
+body 
+	overflow-x: hidden
+	&.lock 
+		overflow: hidden
+
 body
 	font-family: 'Roboto', sans-serif
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	overflow-x: hidden
 	opacity: 1
 
 ul,
@@ -26,12 +31,6 @@ textarea
 
 section
 	padding: 150px 0
-	&.page-title 
-		padding: 0
-		img 	
-			display: block
-			max-width: 100%
-			height: auto
 
 .p-0
 	padding: 0

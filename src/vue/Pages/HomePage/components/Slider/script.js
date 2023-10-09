@@ -22,7 +22,7 @@ export default {
 					img: 'avatar-1',
 				},
 				{
-					name: 'John Wick',
+					name: 'John Doe',
 					type: 'Consumer',
 					description: 'Lorem Ipsum simply dummy text of the printing and typesetting industry.',
 					rating: '3',

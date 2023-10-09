@@ -1,12 +1,12 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
-import HomePage     from '../vue/Pages/HomePage/HomePage.vue'
-import ContactsPage from '../vue/Pages/ContactsPage/ContactsPage.vue'
-import NewsPage     from '../vue/Pages/NewsPage/NewsPage.vue'
+import HomePage from '../vue/Pages/HomePage/HomePage.vue'
+import ShopPage from '../vue/Pages/ShopPage/ShopPage.vue'
+import NewsPage from '../vue/Pages/NewsPage/NewsPage.vue'
 
 export default createRouter({
 	routes: [
 		{path: '/home', component: HomePage, alias: '/'},
-		{path: '/contacts', component: ContactsPage},
+		{path: '/shop', component: ShopPage},
 		{path: '/news', component: NewsPage}
 	],
 	scrollBehavior(to, from, savedPosition) {

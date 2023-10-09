@@ -22,7 +22,7 @@
 				</div>
 				<p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing </p>
 				<div class="footer-social__media">
-					<a v-for="el in socialMedia" :key="el.link" :href="el.link">
+					<a v-for="el in socialMedia" :key="el.link" :href="el.link" target="_blank" :class="el.icon[1]">
 						<VueIcon :icon="el.icon"/>
 					</a>
 				</div>
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 
-		<div id="copyright" data-aos="fade-up" data-aos-duration="1000">
+		<div id="copyright">
 			Copyright © <span>Organick</span>
 		</div>
 	</div>
