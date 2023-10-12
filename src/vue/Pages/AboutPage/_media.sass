@@ -18,7 +18,12 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-	
+	.why-choose-us
+		.about-us__features
+			grid-template-columns: repeat(2, auto)
+			.feature 
+				max-width: 250px
+				margin: 0 auto
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -33,7 +38,12 @@
 				margin: 0 auto
 				.offer__image
 					border-radius: 20px
-	
+
+	.why-choose-us
+		.about-us__features
+			.feature 
+				padding: 25px 10px
+				border-radius: 20px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 750px)
 	.why-choose-us
@@ -41,14 +51,15 @@
 			.half-section__content
 				.half-section__img
 					grid-row: 1
-		.about-us__features
-			grid-template-columns: repeat(2, auto)
-			.feature 
-				max-width: 250px
-				margin: 0 auto
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+	.why-choose-us
+		.about-us__features
+			grid-gap: 10px
+			.feature
+				p 
+					font-size: 12px
 	.about-us__offer
 		.about-us-offer__grid
 			grid-gap: 20px 10px

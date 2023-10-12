@@ -1,5 +1,28 @@
 @import '/src/assets/sass/_vars.sass'
 
+.half-section
+	.half-section__content
+		.half-section__info
+			.rows-wrap
+				width: max-content
+				.half-section-info__row
+					max-width: 100% 
+					padding: 10px
+					border-radius: 15px
+					border: 1px solid #EEEEEE
+					align-items: center
+					&:last-child
+						box-shadow: 0px 12px 15px rgba(201, 201, 201, 0.25)
+					.half-section-info-row__image
+						margin-right: 15px
+						img
+							width: 50px !important
+					.half-section-info-row__text
+						strong
+							margin-bottom: 5px
+							line-height: 1
+						p
+							line-height: 1
 .contacts-location
 	.location__content
 		background-image: url('/src/assets/images/location-bg.png')
@@ -65,6 +88,9 @@
 						p 
 							font-size: 14px
 
+@media (max-width: 750px)
+	.rows-wrap
+		margin: 0 auto
 
 @media (max-width: 480px)
 	.contacts-location

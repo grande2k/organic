@@ -5,13 +5,13 @@
 	grid-template-columns: repeat(4, 1fr)
 	grid-gap: 20px	
 	.product
-		background-color: #fff
+		background-color: $white
 		border-radius: 30px
 		display: flex
 		flex-direction: column
 		justify-content: space-between
 		cursor: pointer
-		border: 1px solid #fff
+		border: 1px solid $white
 		transition: all 0.3s ease
 		& > *
 			padding: 0 30px
@@ -74,6 +74,8 @@
 				display: flex
 				justify-content: space-between
 				align-items: center
+				padding-top: 10px
+				border-top: 1px solid #DEDDDD
 				.product__price
 					display: flex
 					justify-content: space-between
@@ -138,7 +140,7 @@
 					padding: 10px
 			.product__image
 				img 
-					width: 80px
+					width: 100px
 					height: 120px
 			.product__type 
 				font-size: 10px
@@ -146,6 +148,7 @@
 			.product__info
 				.product__name
 					font-size: 14px
+					margin-bottom: 10px
 				.product-info__row
 					.product__price
 						.product-price__old,

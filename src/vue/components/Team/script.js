@@ -66,7 +66,7 @@ export default{
                     id: 4,
                     name: 'Keira Knightley',
                     job: 'Reporter',
-                    photo: 'malika',
+                    photo: 'keira-knightley',
                     socialMedia: [
                         {
                             id: 1,

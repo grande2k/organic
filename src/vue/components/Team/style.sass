@@ -12,39 +12,28 @@
 		grid-gap: 40px 25px
 		.team__member
 			cursor: pointer
+			border-radius: 30px
+			transition: all 0.15s linear
 			.team-member__image
-				border-top-left-radius: 30px
-				border-top-right-radius: 30px
+				border-top-left-radius: inherit
+				border-top-right-radius: inherit
 				img 
 					object-fit: cover
 					border-radius: inherit
 
 			&:hover
+				box-shadow: 0px 29px 44px rgba(150, 150, 150, 0.25)
 				.team-member__info
-					&:before 
-						bottom: 0
-					.team-member__name,
-					.flex .team-member__socialmedia a
-						color: $white
+					background: #fff
+					
 
 			.team-member__info
-				background-color: $white
+				background-color: #F9F8F8
 				padding: 35px 30px
 				position: relative
-				border-bottom-left-radius: 30px
-				border-bottom-right-radius: 30px
+				border-bottom-left-radius: inherit
+				border-bottom-right-radius: inherit
 				overflow: hidden
-				&:before 
-					content: ''
-					position: absolute
-					bottom: -100%
-					left: 0
-					width: 100%
-					height: 100%
-					background-color: $accent
-					transition: all 0.15s linear
-					border-radius: inherit
-					z-index: 1
 				.team-member__name
 					@extend %small-title
 					font-weight: 900

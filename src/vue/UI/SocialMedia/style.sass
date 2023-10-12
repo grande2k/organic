@@ -4,20 +4,42 @@
 	display: flex
 	align-items: center
 	margin-top: 50px
-	a 
-		display: block
+	a
+		display: flex
+		justify-content: center
+		align-items: center
 		font-size: 20px
 		color: $accent
-		transition: none
+		transition: background-color 0.15s linear
+		background-color: #EFF6F1
+		border-radius: 50%
+		width: 60px
+		height: 60px
 		&:not(:last-child)
 			margin-right: 35px
+		&:hover
+			color: #fff
 		&.instagram:hover
-			color: #d6249f
+			background-color: #d6249f
 		&.facebook:hover
-			color: #0000ff
+			background-color: #3b5998 
 		&.twitter:hover
-			color: #1DA1F2
+			background-color: #1DA1F2
 		&.pinterest:hover
-			color: #E60023
+			background-color: #E60023
+		@media (max-width: 768px)
+			width: auto
+			height: auto
+			background-color: transparent
+			&:hover
+				background-color: transparent !important
+			&.instagram:hover
+				color: #d6249f
+			&.facebook:hover
+				color: #3b5998 
+			&.twitter:hover
+				color: #1DA1F2
+			&.pinterest:hover
+				background-color: #E60023
 		@media (max-width: 480px)			
 			font-size: 14px

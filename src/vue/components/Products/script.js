@@ -26,7 +26,7 @@ export default{
                     id: 2,
                     type: 'Fruits',
                     image: 'bananas',
-                    rating: 5,
+                    rating: 4,
                     offer: false,
                     price: {
                         old: '12.00',
@@ -50,7 +50,7 @@ export default{
                     id: 4,
                     type: 'Vegetable',
                     image: 'tomatoes',
-                    rating: 1,
+                    rating: 3,
                     offer: false,
                     price: {
                         old: '10.00',
@@ -146,7 +146,7 @@ export default{
                     id: 12,
                     type: 'Nuts',
                     image: 'white-hazelnuts',
-                    rating: 4,
+                    rating: 2,
                     offer: false,
                     price: {
                         old: '7.45',
