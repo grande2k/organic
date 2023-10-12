@@ -1,0 +1,5 @@
+<div class="social-media-icons">
+	<a v-for="el in socialMedia" :key="el.id" :href="el.link" target="_blank" :class="el.icon[1]">
+		<VueIcon :icon="el.icon"/>
+	</a>
+</div>

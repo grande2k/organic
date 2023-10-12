@@ -1,0 +1,28 @@
+<section class="our-team">
+    <div class="container">
+        <div class="section-title text-center" data-aos="fade-down">
+            <em>Team</em>
+            <h2>Our Organic Experts</h2>
+            <p>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+        </div>
+
+        <div class="our-team__members">
+            <div v-for="member in countedTeam" :key="member.id" class="team__member" data-aos="fade-up">
+                <div class="team-member__image">
+                    <img :src="require(`/src/assets/images/team/${member.photo}.png`)" alt="member.name" class="img-resp">
+                </div>
+                <div class="team-member__info">
+                    <strong v-text="member.name" class="team-member__name"/>
+                    <div class="flex">
+                        <em v-text="member.job" class="team-member__job"/>
+                        <div class="team-member__socialmedia">
+                            <a v-for="item in member.socialMedia" :key="item.id" :href="item.link" target="_blank">
+                                <VueIcon :icon="item.icon"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

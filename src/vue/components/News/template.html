@@ -1,7 +1,8 @@
 <div class="news__grid">
-    <div v-for="item in filteredNews" class="news__item" :key="item.name" data-aos="fade-up" data-aos-duration="1000">
+    <div v-for="item in filteredNews" class="news__item" :key="item.name" data-aos="fade-up">
         <img :src="require(`/src/assets/images/news/${item.img}.png`)" class="news-item__cover" alt="item.alt">
-        <span class="news-item__date" v-text="item.date"/>
+        <time :datetime="item.fullDate" class="news-item__date" v-text="item.date"/>
+
         <div class="news-item__info">
             <div class="news-item__autor">
                 <img src="../../../assets/images/user-icon.svg" alt="">

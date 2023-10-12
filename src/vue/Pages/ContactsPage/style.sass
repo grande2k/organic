@@ -1,0 +1,72 @@
+@import '/src/assets/sass/_vars.sass'
+
+.contacts-location
+	.location__content
+		background-image: url('/src/assets/images/location-bg.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		border-radius: 30px
+		padding: 120px 60px
+		.location__info
+			padding: 45px
+			border-radius: 30px
+			background-color: $white
+			max-width: 500px
+			margin-left: auto
+			.section-title
+				margin-bottom: 20px
+			.location__point
+				display: flex
+				align-items: start
+				&:not(:last-child)
+					margin-bottom: 20px
+				.location-point__marker
+					margin-right: 15px
+					img
+						display: block
+				.location-point__adress
+					strong
+						font-family: 'Open Sans', sans-serif
+						display: block
+						font-size: 18px
+						font-weight: 700
+						color: #525C60
+						margin: 0 0 10px 0
+					p 
+						font-family: 'Open Sans', sans-serif
+						display: block
+						font-size: 18px
+						font-weight: 400
+						color: #525C60
+						margin: 0
+						line-height: 165%
+
+
+@media (max-width: 992px)
+	.contacts-location
+		.location__content
+			padding: 70px 20px
+
+
+@media (max-width: 768px)
+	.contacts-location
+		.location__content
+			border-radius: 20px
+			.location__info
+				padding: 20px
+				border-radius: 20px
+				.location__point
+					.location-point__marker
+						img
+							width: 25px
+					.location-point__adress
+						strong,
+						p 
+							font-size: 14px
+
+
+@media (max-width: 480px)
+	.contacts-location
+		.location__content
+			padding: 50px 15px

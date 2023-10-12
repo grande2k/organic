@@ -2,15 +2,17 @@
 	<div class="header-container">
 		<div class="header__content">
 			<router-link to="/" class="header__logo">
-				<img src="../../../assets/images/logo.svg" class="img-resp" alt="">
+				<img :src="require(`/src/assets/images/logo.svg`)" class="img-resp" alt="Logo">
 			</router-link>
-			<div class="header__links">
+
+			<nav class="header__links">
 				<ul>
 					<li v-for="link in links" :key="link.name" class="header__link">
 						<router-link :to="link.path">{{link.name}}</router-link>
 					</li>
 				</ul>
-			</div>
+			</nav>
+
 			<div class="header__right">
 				<div class="header-right__btn header-search">
 					<VueIcon icon="search"/>
@@ -36,13 +38,13 @@
 					<p v-text="`Cart (${Math.round(cartItems)})`" class="cart-count" />
 				</div>
 				
-				<div class="header__links" :class="{active: burgerActive}">
+				<nav class="header__links" :class="{active: burgerActive}">
 					<ul>
 						<li v-for="link in links" :key="link.name" class="header__link">
 							<router-link :to="link.path" @click="burgerActive = !burgerActive">{{link.name}}</router-link>
 						</li>
 					</ul>
-				</div>
+				</nav>
 			</div>
 		</div>
 	</div>

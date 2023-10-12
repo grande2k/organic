@@ -8,9 +8,9 @@ export default {
 			links: [
 				{name: 'Home', path: '/'},
 				{name: 'About', path: '/about'},
-				{name: 'Pages', path: '/pages'},
+				{name: 'Team', path: '/team'},
 				{name: 'Shop', path: '/shop'},
-				{name: 'Projects', path: '/projects'},
+				{name: 'Contacts', path: '/contacts'},
 				{name: 'News', path: '/news'},
 			],
 			cartItems: 0,

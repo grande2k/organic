@@ -1,0 +1,75 @@
+@import '/src/assets/sass/_vars.sass'
+@import '/src/assets/sass/_extends.sass'
+
+.about-us-page
+	& > .half-section
+		.section-title
+			max-width: 500px
+
+.why-choose-us
+	.half-section
+		.half-section__content
+			.half-section__info
+				.half-section-info__row
+					align-items: start
+					.half-section-info-row__image
+						margin-top: 5px
+						margin-right: 15px
+						img
+							width: 19px !important
+							height: 19px !important
+					.half-section-info-row__text
+						strong
+							margin-bottom: 20px
+	.about-us__features
+		display: grid
+		grid-template-columns: repeat(4, auto)
+		justify-content: center
+		grid-gap: 30px
+		max-width: 1120px
+		margin: 0 auto
+		padding-bottom: 0
+		.feature
+			text-align: center
+			img 
+				display: block
+				margin: 0 auto
+			strong
+				@extend %small-title
+				margin: 15px 0
+			p 
+				@extend %paragraph	
+
+.about-us__offer
+	background-color: $accent
+	.section-title
+		margin-bottom: 35px
+	.about-us-offer__grid
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 20px
+		.about-us-offer__item
+			display: flex
+			flex-direction: column
+			text-align: center
+			.offer__image
+				flex: auto
+				display: flex
+				justify-content: center 
+				align-items: center
+				border-radius: 30px
+				margin-bottom: 25px
+				width: 100%
+				background-color: $white
+				padding: 30px 10px
+				img
+					display: block
+					max-width: 100%
+			p 
+				@extend %small-title
+				font-weight: 500
+				color: $white
+				margin: 0
+
+
+@import 'media'

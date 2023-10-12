@@ -1,0 +1,65 @@
+@import '/src/assets/sass/_vars.sass'
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.about-us__offer
+		.about-us-offer__grid
+			.about-us-offer__item
+				.offer__image
+					padding: 10px
+					img 
+						width: 150px
+						height: 170px
+						object-fit: contain
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.about-us__offer
+		.about-us-offer__grid
+			grid-template-columns: repeat(2, minmax(max-content, 250px))
+			grid-gap: 25px 15px
+			justify-content: center
+			.about-us-offer__item
+				width: 100%
+				margin: 0 auto
+				.offer__image
+					border-radius: 20px
+	
+/* Small Devices, Tablets */
+@media only screen and (max-width : 750px)
+	.why-choose-us
+		.half-section
+			.half-section__content
+				.half-section__img
+					grid-row: 1
+		.about-us__features
+			grid-template-columns: repeat(2, auto)
+			.feature 
+				max-width: 250px
+				margin: 0 auto
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.about-us__offer
+		.about-us-offer__grid
+			grid-gap: 20px 10px
+			.about-us-offer__item
+				.offer__image
+					margin-bottom: 15px
+					img
+						width: 120px
+						height: 100px
+	
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 350px)
+	/**/
+	

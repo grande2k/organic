@@ -13,15 +13,14 @@
 	.home-screen__content 
 		max-width: 530px
 		width: 100%
-		span
+		em
 			@extend %italic-title
-		strong
+		h1
 			display: block
 			font-weight: 800
 			color: $accent
 			font-size: 70px
 			margin: 8px 0 20px 0
-
 
 .natural-offer
 	background-color: $white
@@ -34,10 +33,11 @@
 			display: flex
 			flex-direction: column
 			justify-content: center
-			span 
+			em 
 				@extend %italic-title
-			strong
+			h2
 				@extend %main-title
+				font-size: 40px
 			&.pink
 				background-color: #F96893
 				background-image: url('/src/assets/images/natural-offer-pink.jpg')
@@ -53,44 +53,11 @@
 				background-size: cover
 				background-position: center
 
-.home-about
-	background-color: $white
-	.home-about__content 
-		@extend %grid-half
-		grid-gap: 50px
-		align-items: center
-		.home-about__info
-			span 
-				@extend %italic-title
-			& > strong 
-				@extend %main-title
-			& > p 
-				@extend %paragraph
-				margin: 10px 0 40px 0
-			.home-about-info__row
-				display: flex
-				align-items: center
-				margin-bottom: 35px
-				padding-left: 20px
-				max-width: 560px
-				width: 100%
-				.home-about-info-row__image 
-					margin-right: 30px
-				.home-about-info-row__text 
-					strong	
-						@extend %small-title
-					p 
-						@extend %paragraph
-
+.half-section
+	.section-title
+		margin-bottom: 20px
 
 .products
-	.products__title
-		text-align: center
-		margin-bottom: 40px
-		span	
-			@extend %italic-title
-		strong 
-			@extend %main-title
 	.products__content
 		text-align: center
 		.arrow-button 
@@ -99,17 +66,6 @@
 
 .offers
 	background-color: $accent
-	.offers__top
-		display: flex
-		justify-content: space-between
-		align-items: center
-		margin-bottom: 50px
-		.offers__title
-			span	
-				@extend %italic-title
-			strong 
-				@extend %main-title
-				color: $white
 
 
 .testimonials
@@ -118,13 +74,6 @@
 	background-position: center
 	.container 	
 		max-width: 1100px
-	.testimonials__title
-		text-align: center
-		margin-bottom: 60px
-		span	
-			@extend %italic-title
-		strong 
-			@extend %main-title
 	.testimonials__counters
 		display: flex
 		align-items: center
@@ -172,12 +121,6 @@
 			left: -150px
 			background-color: $white
 			box-shadow: 10px 10px 30px rgba(0,0,0,.3)
-			.eco-friendly__title
-				margin-bottom: 35px
-				span	
-					@extend %italic-title
-				strong 
-					@extend %main-title
 			.eco-friendly__topic
 				strong
 					@extend %small-title
@@ -197,6 +140,14 @@
 		background-position: center
 		background-repeat: no-repeat
 		position: relative
+		overflow: hidden
+		cursor: pointer
+		&:hover
+			img
+				transform: scale(1.05)
+			p 
+				background-color: $accent 
+				color: $white
 		p 
 			margin: 0
 			border-radius: 20px
@@ -212,25 +163,18 @@
 			z-index: 2
 			background-color: $white
 			text-align: center
+			transition: all 0.2s ease-in
 		img
 			position: relative
 			z-index: 1
 			display: block
 			max-width: 100%
 			height: auto
+			transition: all 0.2s ease-in
 
 .news
-	.news__header
-		display: flex
-		justify-content: space-between
-		align-items: center
-		margin-bottom: 50px
-		.news__title
-			max-width: 700px
-			span	
-				@extend %italic-title
-			strong 
-				@extend %main-title
+	.section-title 
+		max-width: 700px
 
 
 @import 'media'

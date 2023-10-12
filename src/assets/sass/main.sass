@@ -6,4 +6,62 @@
 @import "animations"
 
 
+.section-header-row
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+	margin: 0 0 50px 0
+	.section-title
+		margin: 0
+
+.section-title
+	margin: 0 0 50px 0
+	em 
+		@extend %italic-title
+	h2 
+		@extend %main-title
+	p 
+		@extend %paragraph
+		margin-top: 15px
+	&.white 
+		h2
+			color: $white
+
+.half-section
+	background-color: $white
+	.half-section__content 
+		@extend %grid-half
+		grid-gap: 50px
+		align-items: center
+		.half-section__info
+			.flex
+				@extend %grid-half
+				grid-gap: 15px
+				.half-section-info__row
+					padding-left: 0
+					margin-bottom: 0
+					.half-section-info-row__image 
+						margin-right: 15px
+					.half-section-info-row__text
+						strong
+							margin-bottom: 0
+							font-weight: 500
+			& > p 
+				@extend %paragraph
+				margin: 10px 0 40px 0
+			.half-section-info__row
+				display: flex
+				align-items: center
+				margin-bottom: 35px
+				padding-left: 20px
+				max-width: 560px
+				width: 100%
+				.half-section-info-row__image 
+					margin-right: 30px
+				.half-section-info-row__text 
+					strong	
+						@extend %small-title
+					p 
+						@extend %paragraph
+
 @import "media" // Всегда в конце

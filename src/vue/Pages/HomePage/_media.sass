@@ -9,7 +9,7 @@
 		min-height: calc(50vh - 70px)
 		background-position: 100px 50%
 		.home-screen__content
-			strong 
+			h1 
 				font-size: 55px
 
 	.natural-offer
@@ -17,20 +17,10 @@
 			& > *
 				padding: 20px
 				min-height: 230px
-				span 
+				em 
 					font-size: 24px
-				strong
+				h2
 					font-size: 36px
-
-	.home-about
-		.home-about__content
-			.home-about__info
-				.home-about-info__row
-					.home-about-info-row__text
-						strong
-							font-size: 20px
-						p 	
-							line-height: 1.3
 
 	.eco-friendly
 		.eco-friendly__text
@@ -53,32 +43,7 @@
 				font-size: 14px
 				border-radius: 10px
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
-	.home-about
-		.home-about__content
-			.home-about__img 
-				img
-					width: 400px
-					margin: auto
-			.home-about__info
-				.home-about-info__row
-					margin-bottom: 20px
-					padding-left: 10px
-					.home-about-info-row__image 
-						margin-right: 20px
-						img 	
-							width: 35px
-					.home-about-info-row__text
-						strong
-							margin-bottom: 5px
-							font-size: 18px
-						p 
-							font-size: 14px
-				& > p 
-					margin-bottom: 20px 
-
+@media only screen and (max-width: 1024px)
 	.testimonials
 		.testimonials__counters
 			margin-top: 100px
@@ -90,31 +55,32 @@
 				p 
 					font-size: 14px
 
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
 	.natural-offer
 		.natural-offer__content
 			& > *
 				padding: 20px
 				min-height: 230px
-				span 
+				em 
 					font-size: 20px
-				strong
+				h2
 					font-size: 28px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
-	.home-about
-		.home-about__content
-			grid-gap: 20px
-
 	.natural-offer
 		.natural-offer__content
 			& > *
 				padding: 20px
 				min-height: 200px
-				span 
+				border-radius: 20px
+				em 
 					font-size: 20px
-				strong
+				h2
 					font-size: 28px
 
 	.eco-friendly
@@ -136,12 +102,26 @@
 				min-width: auto
 				max-width: 80%
 				margin: 0 auto
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 750px)
+	.testimonials
+		.testimonials__counters
+			.counter__item
+				margin: 0 auto
+				width: 150px
+				height: 150px
+				.counter__number 
+					font-size: 28px
+				p 
+					font-size: 12px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
 	.home-screen
 		.home-screen__content
-			strong 
+			h1 
 				font-size: 36px
 
 	.natural-offer
@@ -149,39 +129,23 @@
 			& > *
 				padding: 15px
 				min-height: 170px
-				border-radius: 20px
-				span 
+				em 
 					font-size: 18px
-				strong
+				h2
 					font-size: 24px
-
-	.home-about
-		.home-about__content
-			.home-about__img 
-				img
-					width: 300px
-			.home-about__info
-				text-align: center
-				.home-about-info__row
-					padding-left: 0
-					justify-content: center
-					text-align: left
-					max-width: 300px
-					margin: 0 auto 20px auto
 
 	.products
 		.products__content
 			.arrow-button 
 				margin-top: 50px
 
-
 	.testimonials
 		.testimonials__counters
 			display: grid
-			grid-template-columns: repeat(2, 1fr)
+			grid-template-columns: repeat(2, auto)
 			grid-gap: 15px
-			.counter__item 
-				margin: 0 auto
+			justify-content: center
+			margin-top: 50px
 
 	.eco-friendly-slides
 		grid-template-columns: 1fr
@@ -213,28 +177,8 @@
 	/**/
 	.home-screen
 		.home-screen__content
-			strong 
+			h1 
 				font-size: 30px
-
-	.home-about
-		.home-about__content
-			.home-about__img 
-				img
-					width: 300px
-			.home-about__info
-				.home-about-info__row
-					.home-about-info-row__image 
-						margin-right: 15px
-						img 	
-							width: 25px
-					.home-about-info-row__text
-						strong
-							margin-bottom: 5px
-							font-size: 14px
-						p 
-							font-size: 10px
-				& > p 
-					margin-bottom: 20px 
 
 	.testimonials
 		.testimonials__counters

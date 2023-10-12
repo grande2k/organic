@@ -1,0 +1,23 @@
+@import '/src/assets/sass/_vars.sass'
+
+.social-media-icons
+	display: flex
+	align-items: center
+	margin-top: 50px
+	a 
+		display: block
+		font-size: 20px
+		color: $accent
+		transition: none
+		&:not(:last-child)
+			margin-right: 35px
+		&.instagram:hover
+			color: #d6249f
+		&.facebook:hover
+			color: #0000ff
+		&.twitter:hover
+			color: #1DA1F2
+		&.pinterest:hover
+			color: #E60023
+		@media (max-width: 480px)			
+			font-size: 14px

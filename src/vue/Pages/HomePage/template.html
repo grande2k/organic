@@ -2,9 +2,12 @@
 	<section class="home-screen">
 		<div class="container">
 			<div class="home-screen__content">
-				<span   data-aos="fade-right" data-aos-duration="1000">100% Natural Food</span>
-				<strong data-aos="fade-right" data-aos-duration="1000">Choose the best healthier way of life</strong>
-				<ArrowButton buttonText="Explore Now" buttonBg="yellow" data-aos="fade-right" data-aos-duration="2000"/>
+				<em data-aos="fade-right" >100% Natural Food</em>
+				<h1 data-aos="fade-right" >Choose the best healthier way of life</h1>
+				
+				<router-link to="/shop">
+					<ArrowButton buttonText="Explore Now" buttonBg="yellow" data-aos="fade-right" data-aos-duration="1500"/>
+				</router-link>
 			</div>
 		</div>
 	</section>
@@ -12,48 +15,55 @@
 	<section class="natural-offer">
 		<div class="container">
 			<div class="natural-offer__content">
-				<div class="natural-offer__item pink" data-aos="fade-down" data-aos-duration="1000">
-					<span>Natural!!</span>
-					<strong>Get Garden <br> Fresh Fruits</strong>
+				<div class="natural-offer__item pink" data-aos="fade-down" >
+					<em>Natural!!</em>
+					<h2>Get Garden <br> Fresh Fruits</h2>
 				</div>
-				<div class="natural-offer__item white" data-aos="fade-up" data-aos-duration="1000">
-					<span>Offer!!</span>
-					<strong>Get 10% off <br> on Vegetables</strong>
+				<div class="natural-offer__item white" data-aos="fade-up" >
+					<em>Offer!!</em>
+					<h2>Get 10% off <br> on Vegetables</h2>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="home-about">
+	<section class="half-section">
 		<div class="container">
-			<div class="home-about__content">
-				<div class="home-about__img" data-aos="fade-right" data-aos-duration="1000">
-					<img src="../../../assets/images/citruses.png" class="img-resp" alt="">
+			<div class="half-section__content">
+				<div class="half-section__img" data-aos="fade-right" >
+					<img :src="require(`/src/assets/images/citruses.png`)" class="img-resp" alt="citruses">
 				</div>
-				<div class="home-about__info" data-aos="fade-left" data-aos-duration="1000">
-					<span>About Us</span>
-					<strong>We Believe in Working Accredited Farmers</strong>
+				<div class="half-section__info" data-aos="fade-left" >
+					<div class="section-title">
+						<em>About Us</em>
+						<h2>We Believe in Working Accredited Farmers</h2>
+					</div>
+
 					<p>Simply dummy text of the printing and typesetting industry. Lorem had ceased to 
 	been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-					<div class="home-about-info__row">
-						<div class="home-about-info-row__image">
-							<img src="../../../assets/images/home-about-1.png" alt="">
+
+					<div class="half-section-info__row">
+						<div class="half-section-info-row__image">
+							<img :src="require(`/src/assets/images/home-about-1.png`)" alt="">
 						</div>
-						<div class="home-about-info-row__text">
+						<div class="half-section-info-row__text">
 							<strong>Organic Foods Only</strong>
 							<p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
 						</div>
 					</div>
-					<div class="home-about-info__row">
-						<div class="home-about-info-row__image">
-							<img src="../../../assets/images/home-about-2.png" alt="">
+					<div class="half-section-info__row">
+						<div class="half-section-info-row__image">
+							<img :src="require(`/src/assets/images/home-about-2.png`)" alt="">
 						</div>
-						<div class="home-about-info-row__text">
+						<div class="half-section-info-row__text">
 							<strong>Quality Standards</strong>
 							<p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
 						</div>
 					</div>
-					<ArrowButton buttonText="Explore Now" buttonBg="blue"/>
+
+					<router-link to="/about">
+						<ArrowButton buttonText="Explore Now" buttonBg="blue"/>
+					</router-link>
 				</div>
 			</div>
 		</div>
@@ -62,15 +72,15 @@
 	<section class="products">
 		<div class="container">
 			<div class="products__content">
-				<div class="products__title" data-aos="fade-down" data-aos-duration="1000">
-					<span>Categories</span>
-					<strong>Our Products</strong>
+				<div class="section-title text-center" data-aos="fade-down" >
+					<em>Categories</em>
+					<h2>Our Products</h2>
 				</div>
 
 				<Products :preview="8"/>
 
 				<router-link to="/shop">
-					<ArrowButton buttonText="Load More" buttonBg="blue" data-aos="fade-up" data-aos-duration="1000"/>
+					<ArrowButton buttonText="Load More" buttonBg="blue" data-aos="fade-up" />
 				</router-link>
 			</div>
 		</div>
@@ -78,9 +88,9 @@
 
 	<section class="testimonials" ref="testimonials">
 		<div class="container">
-			<div class="testimonials__title" data-aos="fade-down" data-aos-duration="1000">
-				<span>Testimonial</span>
-				<strong>What Our Customer Saying?</strong>
+			<div class="section-title text-center" data-aos="fade-down">
+				<em>Testimonial</em>
+				<h2>What Our Customer Saying?</h2>
 			</div>
 
 			<Slider/>
@@ -96,32 +106,33 @@
 
 	<section class="offers">
 		<div class="container">
-			<div class="offers__top">
-				<div class="offers__title" data-aos="fade-right" data-aos-duration="1000">
-					<span>Offer</span>
-					<strong>We Offer Organic For You</strong>
+			<div class="section-header-row">
+				<div class="section-title white" data-aos="fade-right" >
+					<em>Offer</em>
+					<h2>We Offer Organic For You</h2>
 				</div>
+
 				<router-link to="/shop">
-					<ArrowButton class="arrow-button-row" buttonText="View All Product" buttonBg="yellow" data-aos="fade-left" data-aos-duration="1000"/>
+					<ArrowButton class="arrow-button-row" buttonText="View All Product" buttonBg="yellow" data-aos="fade-left" />
 				</router-link>
 			</div>
 
 			<Products filter="offer"/>
 
-			<ArrowButton class="arrow-button-mob" buttonText="View All Product" buttonBg="yellow" data-aos="fade-up" data-aos-duration="1000"/>
+			<ArrowButton class="arrow-button-mob" buttonText="View All Product" buttonBg="yellow" data-aos="fade-up" />
 		</div>
 	</section>
 
-	<section class="eco-friendly p-0">
-		<div class="eco-friendly__photo" data-aos="fade-right" data-aos-duration="1000">
+	<article class="eco-friendly p-0">
+		<div class="eco-friendly__photo" data-aos="fade-right" >
 			
 		</div>
 
-		<div class="eco-friendly__text" data-aos="fade-left" data-aos-duration="1000">
+		<div class="eco-friendly__text" data-aos="fade-left" >
 			<div class="eco-friendly__description">
-				<div class="eco-friendly__title">
-					<span>Eco Friendly</span>
-					<strong>Econis is a Friendly Organic Store</strong>
+				<div class="section-title">
+					<em>Eco Friendly</em>
+					<h2>Econis is a Friendly Organic Store</h2>
 				</div>
 				<div class="eco-friendly__topic">
 					<strong>Start with Our Company First</strong>
@@ -137,42 +148,43 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</article>
 
 	<section class="eco-friendly-slides">
-		<div class="item" data-aos="fade-left" data-aos-duration="1000">
-			<img src="../../../assets/images/organic-juice.png" alt="">
+		<div class="item" data-aos="fade-left" >
+			<img :src="require(`/src/assets/images/organic-juice.png`)" alt="juice">
 			<p>Organic Juice</p>
 		</div>
-		<div class="item" data-aos="fade-right" data-aos-duration="1000">
-			<img src="../../../assets/images/organic-food.png" alt="">
+		<div class="item" data-aos="fade-right" >
+			<img :src="require(`/src/assets/images/organic-food.png`)" alt="food">
 			<p>Organic food</p>
 		</div>
-		<div class="item" data-aos="fade-left" data-aos-duration="1000">
-			<img src="../../../assets/images/organic-cookies.png" alt="">
+		<div class="item" data-aos="fade-left" >
+			<img :src="require(`/src/assets/images/organic-cookies.png`)" alt="cookies">
 			<p>Nuts Cookies</p>
 		</div>
 	</section>
 
-	<section class="news">
+	<article class="news">
 		<div class="container">
-			<div class="news__header">
-				<div class="news__title" data-aos="fade-right" data-aos-duration="1000">
-					<span>News</span>
-					<strong>Discover weekly content about organic food, & more</strong>
+			<div class="section-header-row">
+				<div class="section-title" data-aos="fade-right" >
+					<em>News</em>
+					<h2>Discover weekly content about organic food, & more</h2>
 				</div>
-				<router-link to="/news" data-aos="fade-left" data-aos-duration="1000">
+
+				<router-link to="/news" data-aos="fade-left" >
 					<ArrowButton class="arrow-button-row" buttonText="More News" buttonBg="white"/>
 				</router-link>
 			</div>
 
 			<News :count="2"/>	
 
-			<router-link to="/news" data-aos="fade-up" data-aos-duration="1000">
+			<router-link to="/news" data-aos="fade-up" >
 				<ArrowButton class="arrow-button-mob" buttonText="More News" buttonBg="white"/>
 			</router-link>
 		</div>
-	</section>
+	</article>
 
-	<Subscribe/>
+	<Subscribe class="p-0"/>
 </div>

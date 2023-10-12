@@ -7,10 +7,26 @@
 	.product
 		background-color: #F9F8F8
 		border-radius: 30px
-		padding: 30px
 		display: flex
 		flex-direction: column
 		justify-content: space-between
+		cursor: pointer
+		border: 1px solid #F9F8F8
+		transition: all 0.3s ease
+		box-shadow: 5px 10px 0px rgba(0, 0, 0, 0.15)
+		& > *
+			padding: 0 30px
+			&:first-child
+				text-align: left
+				padding: 30px
+			&:last-child
+				padding: 30px
+		&:hover
+			.product__info
+				&:before 
+					bottom: 0
+				* 
+					color: $white !important
 
 		.product__type
 			font-family: 'Open Sans', sans-serif
@@ -24,11 +40,30 @@
 			align-self: start
 
 		.product__image
-			margin: 30px 0
+			margin-bottom: 10px
 			img
 				margin: 0 auto
 
 		.product__info
+			position: relative
+			overflow: hidden
+			border-bottom-right-radius: inherit
+			border-bottom-left-radius: inherit
+			&:before 
+				content: ''
+				position: absolute
+				bottom: -100%
+				left: 0
+				width: 100%
+				height: 100%
+				transition: all 0.15s linear
+				background-color: $accent
+				z-index: 1
+
+			& > *
+				position: relative
+				z-index: 2
+
 			.product__name
 				color: $accent
 				font-size: 20px
@@ -64,28 +99,45 @@
 		grid-template-columns: repeat(3, 1fr)
 		grid-gap: 15px
 		.product
-			padding: 15px
+			& > *
+				padding: 0 15px
+				&:first-child,
+				&:last-child
+					padding: 15px
 			.product__image
 				img
 					width: 150px
 					height: 200px
 					object-fit: contain
 
+@media (max-width: 992px)
+	.products__grid
+		.product
+			border-radius: 15px
+
 @media (max-width: 768px)
 	.products__grid
 		.product
-			padding: 15px
-			border-radius: 15px
-
+			.product__info
+				.product__name
+					font-size: 16px
+				.product-info__row
+					.product__price
+						.product-price__old,
+						.product-price__current
+							font-size: 14px
 
 @media (max-width: 480px)
 	.products__grid
 		grid-template-columns: repeat(2, 1fr)
 		grid-gap: 10px
 		.product
-			padding: 10px
+			& > *
+				padding: 0 10px
+				&:first-child,
+				&:last-child
+					padding: 10px
 			.product__image
-				margin: 15px 0	
 				img 
 					width: 80px
 					height: 120px
@@ -109,7 +161,6 @@
 	.products__grid
 		grid-template-columns: 1fr
 		.product
-			padding: 10px
 			.product__image
 				img 
 					width: 150px

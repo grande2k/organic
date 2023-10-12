@@ -1,0 +1,79 @@
+<div class="contacts-page">
+	<Banner cover="contacts"/>
+
+	<section class="half-section">
+		<div class="container">
+			<div class="half-section__content">
+				<div class="half-section__img" data-aos="fade-right" >
+					<img :src="require(`/src/assets/images/contacts-fruits.png`)" class="img-resp" alt="fruits">
+				</div>
+				<div class="half-section__info" data-aos="fade-left" >
+					<div class="section-title">
+						<h2>We'd love to talk about how we can work together.</h2>
+					</div>
+
+					<p>Simply dummy text of the printing and typesetting industry. Lorem had ceased to 
+	been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+
+					<div class="half-section-info__row">
+						<div class="half-section-info-row__image">
+							<img :src="require(`/src/assets/images/mail-icon.svg`)" alt="mail">
+						</div>
+						<div class="half-section-info-row__text">
+							<strong>Massege</strong>
+							<p>support@organic.com</p>
+						</div>
+					</div>
+					<div class="half-section-info__row">
+						<div class="half-section-info-row__image">
+							<img :src="require(`/src/assets/images/call-icon.svg`)" alt="call">
+						</div>
+						<div class="half-section-info-row__text">
+							<strong>Contact Us</strong>
+							<p>+01 123 456 789</p>
+						</div>
+					</div>
+
+					<SocialMedia/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contacts-location p-0">
+		<div class="container">
+			<div class="location__content">
+				<div class="location__info">
+					<div class="section-title">
+						<em>Location</em>
+						<h2>Our Farms</h2>
+						<p>Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using.</p>
+					</div>
+
+					<div class="location__point">
+						<div class="location-point__marker">
+							<img :src="require(`/src/assets/images/location-mark.png`)" alt="marker">
+						</div>
+						<div class="location-point__adress">
+							<strong>New York, USA:</strong>
+							<p>299 Park Avenue New York, <br>
+							New York 10171</p>
+						</div>
+					</div>
+					<div class="location__point">
+						<div class="location-point__marker">
+							<img :src="require(`/src/assets/images/location-mark.png`)" alt="marker">
+						</div>
+						<div class="location-point__adress">
+							<strong>London, UK:</strong>
+							<p>30 Stamford Street, <br>
+							London SE1 9LQ</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<Subscribe/>
+</div>

@@ -14,6 +14,7 @@ export default{
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
                     autor: 'Rachi Card',
                     date: '25 Nov',
+                    fullDate: '2023-11-25 14:00',
                     img: '1',
                 },
                 {
@@ -22,6 +23,7 @@ export default{
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
                     autor: 'Robert Moore',
                     date: '29 Nov',
+                    fullDate: '2023-11-29 21:00',
                     img: '2',
                 },
                 {
@@ -30,6 +32,7 @@ export default{
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
                     autor: 'Riana Croxford',
                     date: '30 Nov',
+                    fullDate: '2023-11-30 16:00',
                     img: '3',
                 },
                 {
@@ -38,6 +41,7 @@ export default{
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
                     autor: 'Christiane Amanpour',
                     date: '1 Dec',
+                    fullDate: '2023-12-01 16:00',
                     img: '4',
                 },
                 {
@@ -46,6 +50,7 @@ export default{
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
                     autor: 'Jeremy Clarkson',
                     date: '31 Dec',
+                    fullDate: '2023-12-31 14:30',
                     img: '5',
                 },
                 {
@@ -54,6 +59,7 @@ export default{
                     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
                     autor: 'Piers Morgan',
                     date: '1 Jan',
+                    fullDate: '2023-01-01 15:00',
                     img: '6',
                 },
             ]

@@ -1,7 +1,7 @@
 <footer id="footer">
 	<div class="container">
 		<div class="footer__content">
-			<div class="footer__contacts" data-aos="fade-right" data-aos-duration="1000">
+			<div class="footer__contacts" data-aos="fade-right" >
 				<h3 class="footer-column__title">Contact Us</h3>
 				<div class="footer-column__item">
 					<strong>Email</strong>
@@ -16,18 +16,14 @@
 					<p>88 road, borklyn street, USA</p>
 				</div>
 			</div>
-			<div class="footer__center" data-aos="fade-down" data-aos-duration="1000">
+			<div class="footer__center" data-aos="fade-down" >
 				<div class="footer__logo">
-					<img :src="require(`/src/assets/images/logo.svg`)" alt="logo">
+					<img :src="require(`/src/assets/images/logo.svg`)" alt="Logo">
 				</div>
 				<p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing </p>
-				<div class="footer-social__media">
-					<a v-for="el in socialMedia" :key="el.link" :href="el.link" target="_blank" :class="el.icon[1]">
-						<VueIcon :icon="el.icon"/>
-					</a>
-				</div>
+				<socialMediaIcon/>
 			</div>
-			<div class="footer__pages" data-aos="fade-left" data-aos-duration="1000">
+			<div class="footer__pages" data-aos="fade-left" >
 				<h3 class="footer-column__title">Utility Pages</h3>
 				<p class="footer-column__item">Style Guide</p>
 				<p class="footer-column__item">404 Not Found</p>

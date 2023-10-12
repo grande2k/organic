@@ -12,6 +12,7 @@
 			display: block
 			max-width: 100%
 			height: auto
+			width: 100%
 
 		.news-item__date
 			position: absolute
@@ -97,9 +98,35 @@
 					font-size: 16px
 					margin-top: 10px
 
-@media (max-width: 768px)
+@media (max-width: 992px)
 	.news__grid
 		grid-gap: 50px 15px
+		.news__item
+			.news-item__info
+				padding: 15px
+				border-radius: 10px
+				.news-item__title
+					font-size: 16px
+				.news-item__description
+					font-size: 14px
+				.news-item__more
+					font-size: 14px
+					line-height: 1
+					img 
+						width: 12px
+				.news-item__autor
+					margin-bottom: 10px
+					img 
+						width: 12px
+					p
+						font-size: 14px
+
+@media (max-width: 768px)
+	
+
+@media (max-width: 750px)
+	.news__grid
+		grid-template-columns: 1fr
 
 @media (max-width: 480px)
 	.news__grid
@@ -113,20 +140,13 @@
 				font-size: 12px
 				left: 10px
 			.news-item__info
-				padding: 15px
-				border-radius: 10px
 				.news-item__title
 					font-size: 14px
 				.news-item__description
 					font-size: 12px
 				.news-item__autor
 					margin-bottom: 10px
-					img 
-						width: 12px
 					p
 						font-size: 12px
 				.news-item__more
 					font-size: 12px
-					line-height: 1
-					img 
-						width: 12px

@@ -1,6 +1,9 @@
 <div class="products__grid" v-if="!filter">
-    <div class="product" v-for="product in products" :key="product.id" data-aos="fade-up" data-aos-duration="1000">
-        <div v-text="product.type" class="product__type"/>
+    <div class="product" v-for="product in products" :key="product.id" data-aos="fade-up" >
+        <div>
+            <div v-text="product.type" class="product__type"/>
+        </div>
+
         <div class="product__image">
             <img :src="require(`/src/assets/images/products/${product.image}.png`)" alt="" class="img-resp">
         </div>
@@ -20,8 +23,8 @@
 </div>
 
 <div class="products__grid" v-else>
-    <div class="product" v-for="product in filteredProducts" :key="product.id" data-aos="fade-up" data-aos-duration="1000">
-        <div v-text="product.type" class="product__type"/>
+    <div class="product" v-for="product in filteredProducts" :key="product.id" data-aos="fade-up" >
+        <div><div v-text="product.type" class="product__type"/></div>
         <div class="product__image">
             <img :src="require(`/src/assets/images/products/${product.image}.png`)" alt="" class="img-resp">
         </div>
