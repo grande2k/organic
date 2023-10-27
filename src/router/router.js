@@ -6,14 +6,14 @@ import AboutPage     from '../vue/Pages/AboutPage/AboutPage.vue'
 import TeamPage      from '../vue/Pages/TeamPage/TeamPage.vue'
 import ContactsPage  from '../vue/Pages/ContactsPage/ContactsPage.vue'
 
-export default createRouter({
+const router = createRouter({
 	routes: [
 		{path: '/home', component: HomePage, alias: '/'},
-		{path: '/shop', component: ShopPage},
-		{path: '/news', component: NewsPage},
-		{path: '/about',component: AboutPage},
-		{path: '/team', component: TeamPage},
-		{path: '/contacts', component: ContactsPage},
+		{path: '/shop', component: ShopPage, meta: {title: 'Organick - Shop'}},
+		{path: '/news', component: NewsPage, meta: {title: 'Organick - News'}},
+		{path: '/about',component: AboutPage, meta: {title: 'Organick - About'}},
+		{path: '/team', component: TeamPage, meta: {title: 'Organick - Our Team'}},
+		{path: '/contacts', component: ContactsPage, meta: {title: 'Organick - Contacts'}},
 	],
 	scrollBehavior(to, from, savedPosition) {
 	    if (savedPosition) {
@@ -23,4 +23,10 @@ export default createRouter({
 	    }
 	},
 	history: createWebHashHistory(),
-})
+});
+
+router.beforeEach((to) => {
+	document.title = to.meta?.title ?? 'Organick - Choose the best healthier way of life'
+});
+
+export default router;
