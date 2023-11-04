@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomePage      from '../vue/Pages/HomePage/HomePage.vue'
 import ShopPage      from '../vue/Pages/ShopPage/ShopPage.vue'
 import NewsPage      from '../vue/Pages/NewsPage/NewsPage.vue'
@@ -7,6 +7,7 @@ import TeamPage      from '../vue/Pages/TeamPage/TeamPage.vue'
 import ContactsPage  from '../vue/Pages/ContactsPage/ContactsPage.vue'
 
 const router = createRouter({
+	history: createWebHistory(),
 	routes: [
 		{path: '/home', component: HomePage, alias: '/'},
 		{path: '/shop', component: ShopPage, meta: {title: 'Organick - Shop'}},
@@ -22,7 +23,6 @@ const router = createRouter({
 	      return { top: 0 }
 	    }
 	},
-	history: createWebHashHistory(),
 });
 
 router.beforeEach((to) => {
