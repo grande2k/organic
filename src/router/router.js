@@ -7,7 +7,7 @@ import TeamPage      from '../vue/Pages/TeamPage/TeamPage.vue'
 import ContactsPage  from '../vue/Pages/ContactsPage/ContactsPage.vue'
 
 const router = createRouter({
-	history: createWebHistory(),
+	history: createWebHistory('/organic/'),
 	routes: [
 		{path: '/home', component: HomePage, alias: '/'},
 		{path: '/shop', component: ShopPage, meta: {title: 'Organick - Shop'}},
