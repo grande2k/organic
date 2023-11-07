@@ -38,9 +38,35 @@
 						&.router-link-exact-active
 							color: $light-green
 
+		.link-to-github
+			margin-left: 20px
+			cursor: pointer
+			display: block
+			text-decoration: none
+			&.mob 
+				display: none
+			svg 
+				width: 35px
+				height: 35px
+			&:hover
+				svg
+					transform: scale(1.1)
+
 		.header__right
 			display: flex
 			align-items: center
+			.header-cart
+				display: flex
+				align-items: center
+				cursor: pointer
+				&:hover
+					.header-cart__icon
+						color: $accent
+						background-color: transparent
+					.cart-count
+						&:after 
+							width: 95%
+
 			.header-right__btn
 				width: 56px
 				height: 56px
@@ -60,19 +86,26 @@
 					&:hover
 						color: $light-green
 						background-color: transparent
-				&.header-cart
+				&.header-cart__icon
 					margin: 0 1rem 0 0
 					background-color: $accent
 					border-color: $accent
-					&:hover
-						color: $accent
-						background-color: transparent
 					
 			.cart-count
 				font-size: 18px
 				font-weight: 500
 				margin: 0
 				color: $accent
+				position: relative
+				&:after 
+					content: ''
+					position: absolute
+					bottom: -5px
+					left: 2px
+					width: 0
+					height: 1px
+					background-color: $accent
+					transition: all 0.3s ease
 
 
 @import 'media'

@@ -3,7 +3,7 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1440px)
 	/**/
 	#header
 		height: 100px
@@ -16,6 +16,12 @@
 					.header__link
 						a 
 							font-size: 16px
+
+			.link-to-github
+				svg 
+					width: 30px
+					height: 30px
+
 			.header__right
 				.header-right__btn
 					width: 35px
@@ -45,6 +51,16 @@
 			& > .header__links,
 			& > .header__right
 				display: none
+
+			.link-to-github.mob 
+				display: block
+				margin-left: auto
+				width: 30px
+				height: 30px
+				svg	
+					width: inherit
+					height: inherit
+
 			.burger-menu
 				display: block
 				position: fixed
@@ -88,7 +104,7 @@
 				width: 30px
 				height: 20px
 				position: relative
-				margin-left: 10px
+				margin-left: 15px
 				&:before,
 				&:after,
 				span 

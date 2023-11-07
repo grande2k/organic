@@ -10,4 +10,4 @@ import 'aos/dist/aos.css'
 
 library.add(fas, fab)
 
-createApp(App).use(router, AOS.init({duration: 1000, once:false})).component('VueIcon', FontAwesomeIcon).mount('#app')
+createApp(App).use(router, AOS.init({duration: 1000, once:true})).component('VueIcon', FontAwesomeIcon).mount('body')

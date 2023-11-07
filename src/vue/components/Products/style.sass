@@ -95,10 +95,8 @@
 						margin: 0
 
 
-@media (max-width: 1200px)
+@media (max-width: 1440px)
 	.products__grid
-		grid-template-columns: repeat(3, 1fr)
-		grid-gap: 15px
 		.product
 			& > *
 				padding: 0 15px
@@ -110,9 +108,22 @@
 					width: 150px
 					height: 200px
 					object-fit: contain
+			.product__type
+				font-size: 12px
+			.product__info
+				.product__name
+					font-size: 18px
+				.product-info__row
+					.product__price
+						.product-price__old
+							font-size: 14px
+						.product-price__current
+							font-size: 16px
 
 @media (max-width: 992px)
 	.products__grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 15px
 		.product
 			border-radius: 15px
 

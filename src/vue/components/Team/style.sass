@@ -2,6 +2,11 @@
 @import '/src/assets/sass/_extends.sass'
 
 .our-team
+	.container 
+		text-align: center
+		.arrow-button
+			margin-top: 50px
+
 	.section-title
 		max-width: 850px
 		margin: 0 auto 40px auto
@@ -10,6 +15,7 @@
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
 		grid-gap: 40px 25px
+		text-align: left
 		.team__member
 			cursor: pointer
 			border-radius: 30px
@@ -114,5 +120,8 @@
 					border-bottom-left-radius: 15px
 					border-bottom-right-radius: 15px
 					padding: 25px 20px
+		.container 
+			.arrow-button
+				margin-top: 25px
 
 @media (max-width: 350px)

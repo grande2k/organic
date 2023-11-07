@@ -3,12 +3,13 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1440px)
 	/**/
 	.home-screen
-		min-height: calc(50vh - 70px)
+		min-height: calc(100vh - 100px)
 		background-position: 100px 50%
 		.home-screen__content
+			max-width: 500px
 			h1 
 				font-size: 55px
 
@@ -18,9 +19,20 @@
 				padding: 20px
 				min-height: 230px
 				em 
-					font-size: 24px
+					font-size: 20px
 				h2
+					font-size: 32px
+
+	.testimonials
+		.testimonials__counters
+			margin-top: 100px
+			.counter__item
+				width: 170px
+				height: 170px
+				.counter__number 
 					font-size: 36px
+				p 
+					font-size: 14px
 
 	.eco-friendly
 		.eco-friendly__text
@@ -43,22 +55,11 @@
 				font-size: 14px
 				border-radius: 10px
 
-@media only screen and (max-width: 1024px)
-	.testimonials
-		.testimonials__counters
-			margin-top: 100px
-			.counter__item
-				width: 170px
-				height: 170px
-				.counter__number 
-					font-size: 36px
-				p 
-					font-size: 14px
-
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
+	.home-screen
+		min-height: calc(50vh - 100px)
 	.natural-offer
 		.natural-offer__content
 			grid-gap: 20px

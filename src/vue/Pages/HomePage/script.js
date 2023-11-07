@@ -50,7 +50,7 @@ export default {
 		inView(this.$refs.counters, () => {
 		  	this.$refs.counter_item.forEach(item => {
 				item.start();
-				AOS.init();
+				AOS.refresh();
 			});
 		});
 	}

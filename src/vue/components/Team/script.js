@@ -1,7 +1,12 @@
 'use strict';
 
+import ArrowButton from '../../UI/ArrowButton/ArrowButton.vue'
+
 export default{
     name: 'Team',
+    components: {
+        ArrowButton,
+    },
     props: {
         preview: Number,
     },
